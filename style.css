@@ -1,0 +1,97 @@
+/*RESET BASICO*/
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');/*fonte titulo*/
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Lilita+One&display=swap');/*fonte do paragrafo*/
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+/*alterando a cor da imagem*/
+body {
+    text-align: center;
+    background-color: yellow;
+}
+/*alterando a cor da fonte do titulo*/
+header{
+    color: #ff8fab;
+    padding: 40px;
+    font-family: 'Changa One'; /*alterei a fonte do header*/
+}
+/*diferenciando o menu*/
+nav a{
+    text-decoration: none;
+    color: black;
+    display: inline-block; /*deixa lado a lado*/
+    margin: 20px;
+    padding: 15px 25px;
+    background-color: rgb(236, 236, 42);
+    border-radius: 15px ;
+}
+/*cor de fundo do menu*/
+nav a:hover{
+    background-color: rgb(243, 243, 96);
+    font-size: 20px;
+}
+
+nav{
+    background-color:#ff8fab ;
+    width: 100%;
+    display: inline-block;
+}
+
+.cart{ /*article dos personagens*/
+    display: inline-block;
+    width: 200px;
+    margin: 15px;
+    padding: 10px;
+    border-radius:15px ;
+    background-color: #ff8fab;
+    text-align: center;
+}
+/*article das imagens*/
+.cart img{
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover; /*ajusta sem distorcer*/
+}
+
+#Personagens{
+    background-image: url(./imagens/banner_Smiling_Friends.jpg);
+    background-size: cover;
+    background-position:100%;
+    /*alterar o tamanho da imagem - background-size = cover, contain
+    não repetir a imagem varias vezes - backgroud-repet:no-repet
+    mudar a posição da imagem - backgroud-position*/
+
+}
+
+#Personagens h2{
+    font-family: 'Changa One';
+    color:rgb(238, 56, 56);
+}
+/*cestilo pra segunda seção*/
+#seção-coadjuvantes{
+    margin-top: 30px;
+    background-color: rgb(81, 81, 255);
+    padding: 15px;
+}
+
+.coadjuvantes{
+    display: inline-block;
+    width: 560px;
+    height: 300px;
+    border-radius: 10px;
+    margin-top:20px ;
+    background-color: rgb(108, 108, 255);
+    margin: 20px;
+    padding: 20px;
+}
+
+.coadjuvantes img{
+    width: 100%;
+    box-sizing: 10px;
+    width: 200px;
+    height: 100px;
+}

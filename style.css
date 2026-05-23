@@ -1,56 +1,82 @@
-/*RESET BASICO*/
-@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');/*fonte titulo*/
-@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Lilita+One&display=swap');/*fonte do paragrafo*/
+/* RESET BASICO */
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Lilita+One&display=swap');
 
 *{
     box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
-/*alterando a cor da imagem*/
-body {
+
+body{
     text-align: center;
     background-color: yellow;
+    width: 100%;
+    overflow-x: hidden;
 }
-/*alterando a cor da fonte do titulo*/
+
+/* HEADER */
 header{
     color: #ff8fab;
-    padding: 40px;
-    font-family: 'Changa One'; /*alterei a fonte do header*/
+    padding: 40px 20px;
+    font-family: 'Changa One', sans-serif;
 }
-/*diferenciando o menu*/
+
+/* MENU */
+nav{
+    background-color:#ff8fab;
+    width: 100%;
+    padding: 10px;
+}
+
 nav a{
     text-decoration: none;
     color: black;
-    display: inline-block; /*deixa lado a lado*/
-    margin: 20px;
+    display: inline-block;
+    margin: 10px;
     padding: 15px 25px;
     background-color: rgb(236, 236, 42);
-    border-radius: 15px ;
+    border-radius: 15px;
+    transition: 0.3s;
 }
-/*cor de fundo do menu*/
+
 nav a:hover{
     background-color: rgb(243, 243, 96);
-    font-size: 20px;
+    transform: scale(1.05);
 }
 
-nav{
-    background-color:#ff8fab ;
-    width: 100%;
-    display: inline-block;
+/* PERSONAGENS */
+#Personagens{
+    background-image: url(./imagens/banner_Smiling_Friends.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 30px 10px;
 }
 
-.cart{ /*article dos personagens*/
-    display: inline-block;
-    width: 200px;
-    margin: 15px;
+#Personagens h2{
+    font-family: 'Changa One', sans-serif;
+    color: rgb(238, 56, 56);
+    margin-bottom: 20px;
+}
+
+/* CONTAINER DOS CARDS */
+.personagens-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* CARD */
+.cart{
+    width: 220px;
     padding: 10px;
-    border-radius:15px ;
+    border-radius:15px;
     background-color: #ff8fab;
     text-align: center;
-    transition: 0.3s
+    transition: 0.3s;
 }
-/*article das imagens*/
+
 .cart:hover{
     transform: translateY(-10px);
 }
@@ -59,46 +85,82 @@ nav{
     width: 100%;
     height: 200px;
     border-radius: 15px;
-    object-fit: cover; /*ajusta sem distorcer*/
+    object-fit: cover;
 }
 
-#Personagens{
-    background-image: url(./imagens/banner_Smiling_Friends.jpg);
-    background-size: cover;
-    background-position:100%;
-    /*alterar o tamanho da imagem - background-size = cover, contain
-    não repetir a imagem varias vezes - backgroud-repet:no-repet
-    mudar a posição da imagem - backgroud-position*/
-
-}
-
-#Personagens h2{
-    font-family: 'Changa One';
-    color:rgb(238, 56, 56);
-}
-/*cestilo pra segunda seção*/
+/* COADJUVANTES */
 #seção-coadjuvantes{
     margin-top: 30px;
     background-color: rgb(81, 81, 255);
-    padding: 15px;
+    padding: 20px;
 }
 
+/* CONTAINER */
+.coadjuvantes-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* CARD COADJUVANTES */
 .coadjuvantes{
-    display: inline-block;
+ 
     width: 560px;
-    height: 300px;
+    max-width: 100%;
     border-radius: 10px;
-    margin-top:20px ;
+ 
     background-color: rgb(108, 108, 255);
-    margin: 20px;
+ 
     padding: 20px;
 }
 
 .coadjuvantes img{
     width: 100%;
-   
-    box-sizing: 10px;
-   
-    height: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+/* TABLET */
+@media (max-width: 768px){
+
+    nav a{
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    .cart{
+        width: 45%;
+    }
+
+    .coadjuvantes{
+        width: 90%;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 480px){
+
+    header{
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .cart{
+        width: 90%;
+    }
+
+    nav a{
+        width: 90%;
+        padding: 12px;
+    }
+
+    #Personagens h2{
+        font-size: 24px;
+    }
 }
